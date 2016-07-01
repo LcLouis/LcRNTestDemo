@@ -15,6 +15,7 @@
 		4B6E48191D25441000938519 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B6E48171D25441000938519 /* LaunchScreen.storyboard */; };
 		4B6E48241D25441000938519 /* LcRNTestDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6E48231D25441000938519 /* LcRNTestDemoTests.m */; };
 		4B6E482F1D25441000938519 /* LcRNTestDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6E482E1D25441000938519 /* LcRNTestDemoUITests.m */; };
+		643B71A259A6B9772C911C47 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C04756E6C880F6273C074D63 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,9 @@
 		4B6E482A1D25441000938519 /* LcRNTestDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LcRNTestDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B6E482E1D25441000938519 /* LcRNTestDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LcRNTestDemoUITests.m; sourceTree = "<group>"; };
 		4B6E48301D25441000938519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCD9DFEC3B5C61BD1DBD583C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		C04756E6C880F6273C074D63 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA1E4E9401DF21CFBA7E59F0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				643B71A259A6B9772C911C47 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		365B9BE2C4E9133C93330EDD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C04756E6C880F6273C074D63 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4B6E47FD1D25440F00938519 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +98,8 @@
 				4B6E48221D25441000938519 /* LcRNTestDemoTests */,
 				4B6E482D1D25441000938519 /* LcRNTestDemoUITests */,
 				4B6E48071D25440F00938519 /* Products */,
+				BA4EDC4270173500B9138C0A /* Pods */,
+				365B9BE2C4E9133C93330EDD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +155,15 @@
 			path = LcRNTestDemoUITests;
 			sourceTree = "<group>";
 		};
+		BA4EDC4270173500B9138C0A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCD9DFEC3B5C61BD1DBD583C /* Pods.debug.xcconfig */,
+				CA1E4E9401DF21CFBA7E59F0 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B6E48331D25441000938519 /* Build configuration list for PBXNativeTarget "LcRNTestDemo" */;
 			buildPhases = (
+				4F5CCA38B163F2A1DCD58CDE /* Check Pods Manifest.lock */,
 				4B6E48021D25440F00938519 /* Sources */,
 				4B6E48031D25440F00938519 /* Frameworks */,
 				4B6E48041D25440F00938519 /* Resources */,
+				6DD0EF9843A36BEC9ECE2036 /* Embed Pods Frameworks */,
+				00B37771C9E110F1F31440BF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -267,6 +294,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00B37771C9E110F1F31440BF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F5CCA38B163F2A1DCD58CDE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6DD0EF9843A36BEC9ECE2036 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4B6E48021D25440F00938519 /* Sources */ = {
@@ -416,6 +491,7 @@
 		};
 		4B6E48341D25441000938519 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCD9DFEC3B5C61BD1DBD583C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LcRNTestDemo/Info.plist;
@@ -427,6 +503,7 @@
 		};
 		4B6E48351D25441000938519 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA1E4E9401DF21CFBA7E59F0 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LcRNTestDemo/Info.plist;
@@ -501,6 +578,7 @@
 				4B6E48351D25441000938519 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4B6E48361D25441000938519 /* Build configuration list for PBXNativeTarget "LcRNTestDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +587,7 @@
 				4B6E48381D25441000938519 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4B6E48391D25441000938519 /* Build configuration list for PBXNativeTarget "LcRNTestDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +596,7 @@
 				4B6E483B1D25441000938519 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
